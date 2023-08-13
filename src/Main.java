@@ -10,7 +10,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int N = scanner.nextInt();
+        int N = 0;
+        try {
+            N = scanner.nextInt();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         System.out.println(getResultA(1, N, 0));
     }
 
